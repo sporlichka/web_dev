@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Colorful creature</title>
+        <style>
+          body{
+            background-color: rgb(183, 183, 23);
+          }
+          p{
+            color: rgb(5, 133, 246);
+          }
+          h1{
+            color: black;
+          }  
+        </style>
+        
+        
+    </head>
+    <body>
+        
+        <h1>The coolest creature</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_ZID5maG5NwNY7MlQojiunQKhZTdkkBj2-D0fl5xwFrQUNXCYjrN5qmOwORNY5SKlzf8QK6fh6r2gUn5xWQ_SQ"
+         alt="whale">
+        <p>The <em>Whale</em> is awesome because <strong>it is mammal wich lives underwater</strong>.</p>
+        
+    </body>
+</html>
