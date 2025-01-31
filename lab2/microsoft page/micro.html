@@ -31,33 +31,33 @@
             color: #000;
             font-size: 14px;
         }
-        .backgr
- {
+        .backgr {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
             height: 90vh;
-            background: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-M365-Icon-Bounce:VP5-1920x600') no-repeat center center/cover;
+            background: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-AI-11Ed-Sapphire-MC001-3000x1682:VP5-1920x600') no-repeat center center/cover;
             background-size: 100%;
-            color: white;
+            color: rgb(0, 0, 0);
             text-align: center;
         }
-        .backgr
- .content {
+        .backgr .content {
             max-width: 600px;
+            color: #000;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-left: 20px;
         }
-        .backgr
- h1 {
+        .backgr h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        .backgr
- p {
+        .backgr p {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        .backgr
- a {
+        .backgr a {
             display: inline-block;
             padding: 10px 20px;
             background-color: #0067b8;
@@ -73,18 +73,16 @@
             padding: 20px;
         }
         .section {
-            flex: 1 1 calc(33.333% - 40px);
+            flex: 1 1 calc(25% - 40px);
             box-sizing: border-box;
-            max-width: 300px;
-            border: 1px solid #dcdcdc;
+            max-width: 250px;
+            /* border: 1px solid #dcdcdc; */
             border-radius: 5px;
             padding: 20px;
             text-align: center;
         }
         .section img {
-            max-height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
+            max-height: 40px;
             margin-bottom: 15px;
         }
         .section h2 {
@@ -95,7 +93,7 @@
             display: inline-block;
             margin-top: 10px;
             color: #0067b8;
-            text-decoration: none;
+            text-decoration: underline;
             font-weight: bold;
         }
         .footer {
@@ -106,19 +104,14 @@
             font-size: 0.9rem;
             color: #666;
         }
-
-
         .pics {
             display: flex;
             justify-content: center;
             gap: 20px;
-
             margin: 90px 0;
         }
-
-
         .card {
-            box-shadow:0 .1875rem .4375rem 0 rgba(0,0,0,.13),0 .0625rem .125rem 0 rgba(0,0,0,.11);
+            box-shadow: 0 .1875rem .4375rem 0 rgba(0,0,0,.13), 0 .0625rem .125rem 0 rgba(0,0,0,.11);
             border-radius: none;
         }
     </style>
@@ -136,63 +129,83 @@
             <a href="#">Xbox</a>
             <a href="#">Deals</a>
         </nav>
-
     </header>
 
     <div class="blue" style="text-align:center; background-color: #0067b8; margin:0"><p style="margin:0; padding:20px; color: white">Pay your way, with flexible payment options available at checkout. Learn more </p></div>
     <section class="backgr">
         <div class="content">
-            <h1>Discover what’s possible with Microsoft</h1>
-            <p>Find the tools and solutions that help you achieve more.</p>
+            <h3>Save up to $500 on select Surface Pro, Copilot+ PC</h3>
+            <p> Score savings on a fast, flexible 2-in-1 built for advanced AI experiences. For a limited time.</p>
             <a href="#">Shop now</a>
         </div>
     </section>
 
-
-
-
-        <div class="pics">
-
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-DOOM-The-Dark-Ages-Retail-Safe?wid=406&amp;hei=230&amp;fit=crop" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">DOOM: The Dark Ages Collecrot's Bundle</h5>
-                  <p class="card-text">Get a head start on slaying demons with up to 2-day early access, a 12” DOOM Slayer statue, and more.</p>
-                  <a href="#" class="btn btn-primary">Pre-order now</a>
-                </div>
-            </div>
-            
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-AI-7Ed-Sapphire-MC001?wid=406&amp;hei=230&amp;fit=crop" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Save up to $500 on select Surface Laptop, Copilot+ PC</h5>
-                  <p class="card-text">Save big on an AI-powered companion made for next-gen performance. For a limited time.
-                </p>
-                  <a href="#" class="btn btn-primary">Shop now</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Xbox-Wireless-Controller-Pulse-Cipher?wid=406&hei=230&fit=crop" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Reveal the mysteries within</h5>
-                  <p class="card-text">Get the Xbox Wireless Controller – Pulse Cipher, featuring a transparent red design, silver interior, metallic features, and more.</p>
-                  <a href="#" class="btn btn-primary">Pre-order now</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=406&hei=230&fit=crop" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Xbox Series S</h5>
-                  <p class="card-text">Next-gen performance in the smallest Xbox ever.</p>
-                  <a href="#" class="btn btn-primary">Shop now</a>
-                </div>
-            </div>
-
+    <div class="sections">
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Surface-Devices?wid=40&hei=40" alt="Surface Devices">
+            <a href="#">Shop Surface devices</a>
         </div>
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Xbox-Games-Consoles?wid=40&hei=40" alt="Xbox Games and Consoles">
+            <a href="#">Shop Xbox games and consoles</a>
+            
+        </div>
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Accessories?wid=40&hei=40" alt="Accessories"><br>
+            <a href="#">Shop for accessories</a>
+            
+        </div>
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Business?wid=40&hei=40" alt="Business">
+            <a href="#">Shop for your business</a>
+        </div>
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icon-PC?wid=40&hei=40" alt="Business">
+            <a href="#">Shop for your business</a>
+        </div>
+        <div class="section">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40" alt="Business">
+            <a href="#">Shop for your business</a>
+        </div>
+    </div>
+
+    <div class="pics">
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-DOOM-The-Dark-Ages-Retail-Safe?wid=406&amp;hei=230&amp;fit=crop" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">DOOM: The Dark Ages Collector's Bundle</h5>
+              <p class="card-text">Get a head start on slaying demons with up to 2-day early access, a 12” DOOM Slayer statue, and more.</p>
+              <a href="#" class="btn btn-primary">Pre-order now</a>
+            </div>
+        </div>
+        
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-AI-7Ed-Sapphire-MC001?wid=406&amp;hei=230&amp;fit=crop" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Save up to $500 on select Surface Laptop, Copilot+ PC</h5>
+              <p class="card-text">Save big on an AI-powered companion made for next-gen performance. For a limited time.</p>
+              <a href="#" class="btn btn-primary">Shop now</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Xbox-Wireless-Controller-Pulse-Cipher?wid=406&hei=230&fit=crop" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Reveal the mysteries within</h5>
+              <p class="card-text">Get the Xbox Wireless Controller – Pulse Cipher, featuring a transparent red design, silver interior, metallic features, and more.</p>
+              <a href="#" class="btn btn-primary">Pre-order now</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=406&hei=230&fit=crop" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Xbox Series S</h5>
+              <p class="card-text">Next-gen performance in the smallest Xbox ever.</p>
+              <a href="#" class="btn btn-primary">Shop now</a>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         © Microsoft 2025. All rights reserved.
