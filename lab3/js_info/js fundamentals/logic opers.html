@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 45;
+        if(age >= 14 && age <= 90){
+            alert('ok');
+        }
+
+        // if (!(age >= 14 && age <= 90));
+
+        let login = prompt('Who`s there?', '');
+        if(login == 'Admin'){
+            let password = prompt('Password?', '');
+            if(password == 'TheMaster'){
+                alert('Welcome!')
+            }
+            else if(password == '' || password == null){
+                alert('canceled');
+            }
+            else{alert('wrong password');}
+        }
+        else if(login == '' || login == null){
+                alert('canceled');
+            }
+        else{alert('I dont know you');}
+
+    </script>
+</body>
+</html>
