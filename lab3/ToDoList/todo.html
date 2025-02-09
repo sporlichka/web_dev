@@ -3,44 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Document</title>
     <style>
-        body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-.done {
+        .completed {
     text-decoration: line-through;
     color: gray;
+    border: 1px solid gray;
+  }
+
+  body { 
+    background: rgb(10, 10, 10);
+    background: radial-gradient(circle, rgba(10, 10, 10, 0.1) 0%, rgb(142, 150, 160) 100%);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
 }
 
+  #todo-container {
+    background: rgb(41, 33, 33);
+    width: 400px;
+    margin: 0 auto;
+    border: 2px solid #0033ff;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+  }
+
+
+  #todo-container {
+    background: rgb(34, 59, 170);
+    width: 400px;
+    margin: 0 auto;
+    border: 2px solid #0033ff;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+  }
+
+
+  #header {
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px; 
+  }
+  
+  #input-box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  
+  #input-button {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e60ea;
+  }
+  
+  #input-button:hover {
+    background-color: #9eb7fd; 
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align:left;
+  
+  }
+  
+  li {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    float: right;
+    color:crimson;
+    cursor: pointer;
+    margin: 3px 5px;
+    border: none;
+    padding: 3px 5px;
+    background: none;
+  } 
+  
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+    border: 1px solid gray;
+  }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>ToDo List</h2>
-        <input type="text" id="taskInput" placeholder="New Task">
-        <button onclick="addTask()">Add</button>
-        <ul id="taskList"></ul>
+    
+    <div id="todo-container">
+        <div id="header">
+            <h1>To Do List</h1>
+        </div>
+        <div id="todo-form">
+            <input type="text" type = "text" class="input-item" name="input_box" id="input-box" placeholder="Add Task"/>
+            <button id="input-button" onclick="addTask()">Add</button>
+        </div>
+        <h2>Task List</h2>
+        <ul id="list-container"></ul>
     </div>
-    <script src="script.js"></script>
+    
+
+        
+    </div>
+    <script type="text/javascript" src="script.js">
+
+    </script>
 </body>
 </html>

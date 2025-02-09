@@ -1,30 +1,50 @@
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+
 function addTask() {
-    let taskInput = document.getElementById("taskInput");
-    let taskText = taskInput.value.trim();
+    const task = inputBox.value.trim();
+    if (!task) {
+        alert("Please write a task");
+        return;
+    }
 
-    if (taskText === "") return;
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <label>
+          <input type="checkbox" class="task-checkbox">
+          <span>${task}</span>
+        </label>
+        <span class="edit-btn">Edit</span>
+        <span class="delete-btn">Delete</span>
+    `;
 
-    let li = document.createElement("li");
+    listContainer.appendChild(li);
+    inputBox.value = ""; // очищает поле ввода
 
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.onchange = function () {
-        li.classList.toggle("done");
-    };
+    const checkbox = li.querySelector(".task-checkbox");
+    const editBtn = li.querySelector(".edit-btn");
+    const taskSpan = li.querySelector("span");
+    const deleteBtn = li.querySelector(".delete-btn");
 
-    let span = document.createElement("span");
-    span.textContent = taskText;
+    // Обработчик чекбокса
+    checkbox.addEventListener("click", function () {
+        li.classList.toggle("completed", checkbox.checked);
+    });
 
-    let deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = "🗑️";
-    deleteBtn.onclick = function () {
-        li.remove();
-    };
+    // Обработчик редактирования
+    editBtn.addEventListener("click", function () {
+        const update = prompt("Edit task:", taskSpan.textContent);
+        if (update !== null && update.trim() !== "") {
+            taskSpan.textContent = update;
+            li.classList.remove("completed");
+            checkbox.checked = false;
+        }
+    });
 
-    li.appendChild(checkbox);
-    li.appendChild(span);
-    li.appendChild(deleteBtn);
-
-    document.getElementById("taskList").appendChild(li);
-    taskInput.value = "";
+    // Обработчик удаления
+    deleteBtn.addEventListener("click", function () {
+        if (confirm("Are you sure you want to delete this task?")) {
+            li.remove();
+        }
+    });
 }
