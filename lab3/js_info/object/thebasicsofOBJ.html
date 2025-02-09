@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let user = {
+            name : "John",
+            surname : "Smith"
+        };
+        user.name = 'Pete';
+        delete(user.name);
+
+        //2
+        function isEmpty(obj){
+            for(let key in obj){
+                return false;
+            }
+            return true;
+        }
+        let schedule = {};
+
+        alert( isEmpty(schedule) ); // true
+
+        schedule["8:30"] = "get up";
+
+        alert( isEmpty(schedule) ); // false
+
+        //3
+        let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+        }
+        function sum(obj){
+            let sum = 0;
+            for(let key in obj){
+                sum += obj[key];
+            }
+            return sum;
+        }
+        alert(sum(salaries));
+
+        //4
+        function multiplyNumeric(menu){
+            for(let key in menu){
+                if(typeof(menu[key])=="number"){
+                    menu[key] *= 2;
+                }
+            }
+            for(let key in menu){
+                console.log(`${key} : ${menu[key]}`);
+            }
+        }
+        // before the call
+        let menu = {
+          width: 200,
+          height: 300,
+          title: "My menu"
+        };
+
+        multiplyNumeric(menu);
+
+        // after the call
+        // menu = {
+        //   width: 400,
+        //   height: 600,
+        //   title: "My menu"
+        // };
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     //1
+    //     let obj = {};
+
+    // function A() { return obj; }
+    // function B() { return obj; }
+
+    // alert( new A() == new B() ); // true
+
+    // //2
+    // function calculator(){
+    //         this.read = function(){
+    //             this.a = +prompt('a?', '');
+    //             this.b = +prompt('b?', '');
+    //         };
+    //         this.print = function(){
+    //             console.log(this.a);
+    //             console.log(this.b);
+    //         };
+    //         this.sum = function(){
+    //             return(this.a + this.b);
+    //         };
+    //         this.mul = function(){
+    //             return(this.a * this.b);
+    //         };
+    // }
+    // calc = new calculator();
+    // calc.read();
+    // alert("sum: " + calc.sum());
+    // alert('mult: ' + calc.mul());
+
+    //3
+
+    function Accumulator(n){
+        this.value = n;
+        this.read = function(){
+            this.value += +prompt('number?', '');
+        }}
+    let accumulator = new Accumulator(1); // initial value 1
+
+    accumulator.read(); // adds the user-entered value
+    accumulator.read(); // adds the user-entered value
+
+
+    alert(accumulator.value); // shows the sum of these values
+    </script>
+</body>
+</html>
