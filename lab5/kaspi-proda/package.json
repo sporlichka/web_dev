@@ -1,5 +1,5 @@
 {
-  "name": "kaspi-prod-lab5",
+  "name": "kaspi-proda",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:kaspi-prod-lab5": "node dist/kaspi-prod-lab5/server/server.mjs"
+    "serve:ssr:kaspi-proda": "node dist/kaspi-proda/server/server.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,30 @@
+<div class="product-card">
+  <a [href]="product.link" target="_blank">
+    <img [src]="product.image" class="main-image">
+  </a>
+
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <p><strong>Rating:</strong> {{ product.rating }}</p>
+
+  <p>
+    <button (click)="like()" style="background-color: rgb(195, 53, 164);">Like</button> 
+    {{ product.likes }}
+  </p>
+  <p>
+    <button (click)="unlike()" style="background-color: rgb(195, 53, 164);">Unlike</button> 
+  </p>
+
+  <!-- Галерея -->
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let img of product.gallery">
+      <img [src]="img" (click)="changeImage(img)">
+    </div>
+  </div>
+
+  <!-- Кнопки поделиться -->
+  <div class="share-buttons">
+    <button (click)="shareViaWhatsApp()" style="background-color: lightgreen;">WhatsApp</button>
+    <button (click)="shareViaTelegram()">Telegram</button>
+  </div>
+</div>

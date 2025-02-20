@@ -1,28 +1,33 @@
-import { NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  rating: number;
-  link: string;
-  image: string;
-  likes: number;
-  gallery: string[];
-  category: string;
-}
+import { Component } from '@angular/core';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @Component({
-  selector: 'app-header',
-  imports: [NgFor],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  selector: 'app-root',
+  standalone: true,
+  imports: [ProductListComponent], // Добавляем импорт компонента
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class HeaderComponent implements OnInit {
-  products: Product[] = [
+export class AppComponent {
+  selectedCategory: string = 'all';
+  products = [
     {
       id: 1,
+      name: 'Apple iPhone 13',
+      description: 'Latest iPhone with A15 Bionic chip.',
+      rating: 4.8,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/apple-iphone-13-128gb-sinii-102298364/',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hba/h2e/64206204993566.jpg?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/hba/h2e/64206204993566.jpg?format=gallery-medium',
+        'https://resources.cdn-kaspi.kz/img/m/p/hb8/h32/64206209384478.jpg?format=gallery-medium',
+        'https://resources.cdn-kaspi.kz/img/m/p/he8/h1c/64206212857886.jpg?format=gallery-medium'
+      ],
+      category: 'smartphones'
+    },
+    {
+      id: 2,
       name: 'Apple iPhone 13',
       description: 'Latest iPhone with A15 Bionic chip.',
       rating: 4.8,
@@ -53,47 +58,15 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-  selectedCategory: string = 'all';
-  filteredProducts: Product[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.filteredProducts = this.getFilteredProducts();
-  }
-
-  getFilteredProducts(): Product[] {
+  getFilteredProducts() {
     if (this.selectedCategory === 'all') {
-      return this.products; // Если выбрана категория "все", возвращаем все товары
-    } else {
-      return this.products.filter(product => product.category === this.selectedCategory);
+      return this.products;
     }
+    return this.products.filter(p => p.category === this.selectedCategory);
   }
 
   selectCategory(category: string): void {
     this.selectedCategory = category;
-    this.filteredProducts = this.getFilteredProducts(); // Обновляем отфильтрованный список
-  }
-
-  shareViaWhatsApp(product: Product): void {
-    const url = `https://wa.me/?text=${product.link}`;
-    window.open(url);
-    console.log(product);
-  }
-
-  shareViaTelegram(product: Product): void {
-    const url = `https://t.me/share/url?url=${product.link}&text=${product.name}`;
-    window.open(url);
-  }
-
-  on(product: Product, img: string) {
-    product.image = img;
-  }
-
-  Like(product: Product): void {
-    product.likes += 1;
-  }
-  Unlike(product: Product): void{
-    product.likes -= 1;
   }
 }

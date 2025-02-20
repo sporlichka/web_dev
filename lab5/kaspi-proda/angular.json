@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kaspi-prod-lab5": {
+    "kaspi-proda": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/kaspi-prod-lab5",
+            "outputPath": "dist/kaspi-proda",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kaspi-prod-lab5:build:production"
+              "buildTarget": "kaspi-proda:build:production"
             },
             "development": {
-              "buildTarget": "kaspi-prod-lab5:build:development"
+              "buildTarget": "kaspi-proda:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "7a61767c-a5d2-45bd-9946-d13bdcae786d"
+    "analytics": "05074756-a684-452c-a6ef-8a8eec622801"
   }
 }
