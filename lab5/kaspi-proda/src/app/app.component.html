@@ -1,7 +1,9 @@
 <div class="category-selector">
   <button (click)="selectCategory('all')">Все</button>
-  <button (click)="selectCategory('smartphones')">Смартфоны</button>
-  <button (click)="selectCategory('laptops')">Ноутбуки</button>
+  <button (click)="selectCategory('smartphones')">smartphones</button>
+  <button (click)="selectCategory('laptops')">laptops</button>
+  <button (click)="selectCategory('equipment')">equipment</button>
+  <button (click)="selectCategory('furniture')">furniture</button>
 </div>
 
 <app-product-list [products]="getFilteredProducts()"></app-product-list>
