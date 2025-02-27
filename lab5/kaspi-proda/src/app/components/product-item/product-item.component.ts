@@ -1,16 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../models/product.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-item',
-  standalone: true, // если компонент standalone
-  imports: [CommonModule], // Добавляем сюда CommonModule
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent {
   @Input() product!: Product;
+  @Output() delete = new EventEmitter<void>();
+  @Output() likeProduct = new EventEmitter<number>(); // Добавил это событие
 
   shareViaWhatsApp(): void {
     const url = `https://wa.me/?text=${this.product.link}`;
@@ -26,11 +28,11 @@ export class ProductItemComponent {
     this.product.image = img;
   }
 
-  like(): void {
-    this.product.likes += 1;
+  deleteItem() {
+    this.delete.emit();
   }
 
-  unlike(): void {
-    this.product.likes -= 1;
+  like() {
+    this.likeProduct.emit(this.product.id); // Генерируем событие с ID продукта
   }
 }

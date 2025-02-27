@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,71 @@ import { ProductListComponent } from './components/product-list/product-list.com
 export class AppComponent {
   selectedCategory: string = 'all';
   products = [
+    {
+      id: 16,
+      name: 'Morbido диван прямой Комфорт',
+      description: 'cool furniture',
+      rating: 4.1,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/morbido-divan-prjamoi-komfort-obivka-mikroveljur-80h210h80-sm-seryi-109382996/?c=750000000',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h9b/h48/86777038274590.png?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/h9b/h48/86777038274590.png?format=gallery-medium'
+      ],
+      category: 'furniture'
+    },
+    {
+      id: 17,
+      name: 'Стул Чили',
+      description: 'cool furniture',
+      rating: 4.1,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/stul-chili-86x45x37-sm-obivka-seryi-veljur-109319431/?c=750000000',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/h3b/85982139088926.jpg?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/hcf/h3b/85982139088926.jpg?format=gallery-medium'
+      ],
+      category: 'furniture'
+    },
+    {
+      id: 18,
+      name: 'Матрас Ортопед без пружин',
+      description: 'cool furniture',
+      rating: 4.1,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/matras-ortoped-bez-pruzhin-160x200x22-sm-chehol-viskoza-zhakkard-115839796/?c=750000000',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hb1/hea/84870309380126.png?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/hb1/hea/84870309380126.png?format=gallery-medium'
+      ],
+      category: 'furniture'
+    },
+    {
+      id: 19,
+      name: 'стол письменный',
+      description: 'cool furniture',
+      rating: 4.7,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/stol-pis-mennyi-s-nadstroikoi-40x114x140-sm-stolpis002-106541589/?c=750000000',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h82/h95/85993320710174.jpg?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/h82/h95/85993320710174.jpg?format=gallery-medium'
+      ],
+      category: 'furniture'
+    },
+    {
+      id: 20,
+      name: 'Стеллаж напольный Abuer',
+      description: 'cool furniture',
+      rating: 4.7,
+      likes: 0,
+      link: 'https://kaspi.kz/shop/p/stellazh-napol-nyi-abuer-66x31x132-sm-belyi-104771353/?c=750000000',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/had/hfe/85358048673822.jpg?format=gallery-medium',
+      gallery: [
+        'https://resources.cdn-kaspi.kz/img/m/p/had/hfe/85358048673822.jpg?format=gallery-medium'
+      ],
+      category: 'furniture'
+    },
     {
       id: 1,
       name: 'Apple iPhone 13',
@@ -228,74 +294,9 @@ export class AppComponent {
       ],
       category: 'equipment'
     },
-    {
-      id: 16,
-      name: 'Morbido диван прямой Комфорт',
-      description: 'cool furniture',
-      rating: 4.1,
-      likes: 0,
-      link: 'https://kaspi.kz/shop/p/morbido-divan-prjamoi-komfort-obivka-mikroveljur-80h210h80-sm-seryi-109382996/?c=750000000',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h9b/h48/86777038274590.png?format=gallery-medium',
-      gallery: [
-        'https://resources.cdn-kaspi.kz/img/m/p/h9b/h48/86777038274590.png?format=gallery-medium'
-      ],
-      category: 'furniture'
-    },
-    {
-      id: 17,
-      name: 'Стул Чили',
-      description: 'cool furniture',
-      rating: 4.1,
-      likes: 0,
-      link: 'https://kaspi.kz/shop/p/stul-chili-86x45x37-sm-obivka-seryi-veljur-109319431/?c=750000000',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/h3b/85982139088926.jpg?format=gallery-medium',
-      gallery: [
-        'https://resources.cdn-kaspi.kz/img/m/p/hcf/h3b/85982139088926.jpg?format=gallery-medium'
-      ],
-      category: 'furniture'
-    },
-    {
-      id: 18,
-      name: 'Матрас Ортопед без пружин',
-      description: 'cool furniture',
-      rating: 4.1,
-      likes: 0,
-      link: 'https://kaspi.kz/shop/p/matras-ortoped-bez-pruzhin-160x200x22-sm-chehol-viskoza-zhakkard-115839796/?c=750000000',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hb1/hea/84870309380126.png?format=gallery-medium',
-      gallery: [
-        'https://resources.cdn-kaspi.kz/img/m/p/hb1/hea/84870309380126.png?format=gallery-medium'
-      ],
-      category: 'furniture'
-    },
-    {
-      id: 19,
-      name: 'стол письменный',
-      description: 'cool furniture',
-      rating: 4.7,
-      likes: 0,
-      link: 'https://kaspi.kz/shop/p/stol-pis-mennyi-s-nadstroikoi-40x114x140-sm-stolpis002-106541589/?c=750000000',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h82/h95/85993320710174.jpg?format=gallery-medium',
-      gallery: [
-        'https://resources.cdn-kaspi.kz/img/m/p/h82/h95/85993320710174.jpg?format=gallery-medium'
-      ],
-      category: 'furniture'
-    },
-    {
-      id: 20,
-      name: 'Стеллаж напольный Abuer',
-      description: 'cool furniture',
-      rating: 4.7,
-      likes: 0,
-      link: 'https://kaspi.kz/shop/p/stellazh-napol-nyi-abuer-66x31x132-sm-belyi-104771353/?c=750000000',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/had/hfe/85358048673822.jpg?format=gallery-medium',
-      gallery: [
-        'https://resources.cdn-kaspi.kz/img/m/p/had/hfe/85358048673822.jpg?format=gallery-medium'
-      ],
-      category: 'furniture'
-    },
   ];
 
-
+likedprods: Set<number> = new Set();
   getFilteredProducts() {
     if (this.selectedCategory === 'all') {
       return this.products;
@@ -305,5 +306,23 @@ export class AppComponent {
 
   selectCategory(category: string): void {
     this.selectedCategory = category;
+  }
+  removeProduct(productId: number): void {
+    this.products = this.products.filter(p => p.id !== productId);
+  }
+
+  likeProduct(id : number){
+    for(var i = 0; i < this.products.length;i++){
+      if (this.products[i].id === id) {
+        if (this.likedprods.has(id)) {
+          this.likedprods.delete(id);
+          this.products[i].likes -=1;
+        }
+        else {
+          this.products[i].likes += 1;
+          this.likedprods.add(id);
+        } 
+      }
+    }
   }
 }

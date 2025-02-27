@@ -8,12 +8,14 @@
   <p><strong>Rating:</strong> {{ product.rating }}</p>
 
   <p>
-    <button (click)="like()" style="background-color: rgb(195, 53, 164);">Like</button> 
-    {{ product.likes }}
+    <button (click)="like()" style="background-color: rgb(195, 53, 164);">
+      {{ product.likes }} ❤️
+    </button> 
   </p>
-  <p>
+  
+  <!-- <p>
     <button (click)="unlike()" style="background-color: rgb(195, 53, 164);">Unlike</button> 
-  </p>
+  </p> -->
 
   <!-- Галерея -->
   <div class="gallery">
@@ -26,5 +28,6 @@
   <div class="share-buttons">
     <button (click)="shareViaWhatsApp()" style="background-color: lightgreen;">WhatsApp</button>
     <button (click)="shareViaTelegram()">Telegram</button>
+      <button (click)="deleteItem()" style="background-color: red;">Delete</button>
   </div>
 </div>

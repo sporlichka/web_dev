@@ -6,4 +6,9 @@
   <button (click)="selectCategory('furniture')">furniture</button>
 </div>
 
-<app-product-list [products]="getFilteredProducts()"></app-product-list>
+<app-product-list 
+  [products]="getFilteredProducts()" 
+  (delete)="removeProduct($event)"
+  (likeProduct)="likeProduct($event)">
+</app-product-list>
+
