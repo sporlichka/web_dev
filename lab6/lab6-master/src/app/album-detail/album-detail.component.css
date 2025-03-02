@@ -1,0 +1,88 @@
+main {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Инпут */
+input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+  outline: none;
+  width: 250px;
+  text-align: center;
+}
+
+input:focus {
+  border-color: #5a2ca0;
+  box-shadow: 0px 4px 10px rgba(90, 44, 160, 0.2);
+}
+
+/* Кнопки */
+button {
+  display: flex;
+  height: 3em;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: #6a1b9a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #8e24aa;
+  box-shadow: 0px 4px 15px rgba(142, 36, 170, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Стиль для кнопки "Назад" */
+.back-button {
+  background: transparent;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background: #6a1b9a;
+  color: white;
+}
+
+/* Ссылка */
+a {
+  font-size: 18px;
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #8e24aa;
+  text-decoration: underline;
+}
