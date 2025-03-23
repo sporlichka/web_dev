@@ -11,6 +11,5 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'albums', component: AlbumComponent },
     { path: 'albums/:id', component: AlbumDetailComponent },
-    { path: 'albums/:id/photos', component: PhotosComponent }, 
-    { path: '**', redirectTo: '/home' }
+    { path: 'albums/:id/photos', component: PhotosComponent },
 ];

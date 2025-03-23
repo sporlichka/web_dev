@@ -20,8 +20,8 @@ export interface Photo {
   providedIn: 'root'
 })
 export class AlbumsService {
-  private albumsUrl = 'assets/albums.json';
-  private photosUrl = 'assets/photos.json';
+  private albumsUrl = 'https://jsonplaceholder.typicode.com/albums';
+  private photosUrl = 'https://jsonplaceholder.typicode.com/albums';
 
   constructor(private http: HttpClient) {}
 
@@ -36,8 +36,6 @@ export class AlbumsService {
   }
 
   getPhotosByAlbumId(albumId: number): Observable<Photo[]> {
-    return this.http.get<Photo[]>(this.photosUrl).pipe(
-      map((photos: Photo[]) => photos.filter((photo: Photo) => photo.albumId === albumId))
-    );
+    return this.http.get<Photo[]>(`${this.photosUrl}/${albumId}/photos`);
   }
 }
