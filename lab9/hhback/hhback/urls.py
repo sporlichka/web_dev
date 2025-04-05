@@ -1,5 +1,5 @@
 """
-URL configuration for shopik project.
+URL configuration for hhback project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -15,22 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from api import views
-api_patterns = [
-    path('products/', views.product_list),
-    path('products/<int:id>/', views.Product_detail),
-    path('categories/', views.category_list),
-    path('categories/<int:id>/', views.category_detail),
-    path('categories/<int:id>/products/', views.products_by_category),
-]
-# /api/products - List of all Products
-# /api/products/<int:id>/ - Get one Product
-# /api/categories/ - List of all Categories
-# /api/categories/<int:id>/ - Get one Category
-# /api/categories/<int:id>/products/ - List of Products by Category
+from django.urls import path
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(api_patterns)),
 ]
-
