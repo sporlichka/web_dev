@@ -2,12 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 from api import views
 apipatterns = [
-    path('companies/', views.CompanyList.as_view()),
-    path('companies/<int:id>/', views.CompanyDetail.as_view()),
-    path('companies/<int:id>/vacancies/', views.CompanyVacanciesList.as_view()),
-    path('vacancies/', views.VacancyList.as_view()),
-    path('vacancies/<int:id>/', views.VacancyDetail.as_view()),
-    path('vacancies/top_ten/', views.TopTenVacanciesList.as_view()),
+    path('companies/', views.company_list),
+    path('companies/<int:id>/', views.company_detail),
+    path('companies/<int:id>/vacancies/', views.company_vacancies),
+    path('vacancies/', views.vacancy_list),
+    path('vacancies/<int:id>/', views.vacancy_detail),
+    path('vacancies/top_ten/', views.top_ten_vacancies),
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
