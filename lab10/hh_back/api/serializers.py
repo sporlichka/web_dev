@@ -1,31 +1,25 @@
 from rest_framework import serializers
 from .models import Company, Vacancy
 
-class Company_serializer(serializers.ModelSerializer):
+class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = '__all__'
+        fields = ['id', 'name', 'description', 'city', 'address']
 
-class Vacancy_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = Vacancy
-        fields = '__all__'
-
-# Custom serializer using serializers.Serializer
-class CompanyCustomSerializer(serializers.Serializer):
+class VacancySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(max_length=255)
     description = serializers.CharField()
-    city = serializers.CharField(max_length=255)
-    address = serializers.CharField()
+    salary = serializers.FloatField()
+    company_id = serializers.IntegerField()
 
     def create(self, validated_data):
-        return Company.objects.create(**validated_data)
+        return Vacancy.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
-        instance.city = validated_data.get('city', instance.city)
-        instance.address = validated_data.get('address', instance.address)
+        instance.salary = validated_data.get('salary', instance.salary)
+        instance.company_id = validated_data.get('company_id', instance.company_id)
         instance.save()
         return instance
